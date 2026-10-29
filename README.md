@@ -209,7 +209,7 @@ Questions, contributions, or technical support — reach out through the officia
 
 * 💬 **Discord Community:** [https://discord.gg/rxw8Hwk3qA](https://discord.gg/rxw8Hwk3qA)
 * 🎵 **TikTok:** [@noxofusion](https://www.tiktok.com/@noxofusion)
-* 📺 **YouTube:** [@noxofusion2010](https://www.youtube.com/@lakofusion2010)
+* 📺 **YouTube:** [@noxofusion2010](https://www.youtube.com/@noxofusion2010)
 
 ---
 
