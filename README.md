@@ -208,8 +208,8 @@ flowchart TD
 Questions, contributions, or technical support — reach out through the official channels:
 
 * 💬 **Discord Community:** [https://discord.gg/rxw8Hwk3qA](https://discord.gg/rxw8Hwk3qA)
-* 🎵 **TikTok:** [@lakofusion](https://www.tiktok.com/@lakofusion)
-* 📺 **YouTube:** [@lakofusion2010](https://www.youtube.com/@lakofusion2010)
+* 🎵 **TikTok:** [@noxofusion](https://www.tiktok.com/@noxofusion)
+* 📺 **YouTube:** [@noxofusion2010](https://www.youtube.com/@lakofusion2010)
 
 ---
 
